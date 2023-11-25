@@ -182,6 +182,32 @@ header{
 }
 /*----------MAIN BANNER--------------*/
 #main-banner {
+	/* Existing styles */
+
+/* For desktop banners */
+.banner-desktop {
+    display: block; /* Default display for desktop */
+}
+
+/* For mobile banners */
+.banner-mobile {
+    display: none; /* Default display for mobile */
+}
+
+/* Media query to hide desktop banners on mobile */
+@media only screen and (max-width: 750px) {
+    .banner-desktop {
+        display: none;
+    }
+
+    /* Display mobile banners on mobile devices */
+    .banner-mobile {
+        display: block;
+    }
+}
+
+/* Rest of your existing styles */
+
 /* Media query for tablets and smaller screens */
 @media (max-width: 768px) {
   .desktop-banner {
