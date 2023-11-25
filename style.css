@@ -205,6 +205,15 @@ header{
         display: block;
     }
 }
+.slider {
+    max-width: 100%;
+    overflow: hidden; /* This should prevent scroll bars */
+}
+
+.slick-slide img {
+    max-width: 100%;
+    height: auto;
+}
 
 /* Rest of your existing styles */
 
