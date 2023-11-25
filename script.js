@@ -27,6 +27,13 @@ function nextBanner() {
     currentBannerIndex = (currentBannerIndex + 1) % banners.length;
     showBanner(currentBannerIndex);
 }
+function autoSlide() {
+    nextBanner();
+    setTimeout(autoSlide, 3000); // Change slide every 3 seconds
+}
+
+// Start automatic sliding
+autoSlide();
 
 // Call the function on page load and window resize
 window.onload = function () {
