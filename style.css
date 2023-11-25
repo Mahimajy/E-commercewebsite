@@ -205,29 +205,6 @@ header{
         display: block;
     }
 }
-.slider {
-    max-width: 100%;
-    overflow: hidden; /* This should prevent scroll bars */
-}
-
-.slick-slide img {
-    max-width: 100%;
-    height: auto;
-}
-/* Adjust the width and height of the slider container */
-.slider {
-    width: 80%; /* You can use a percentage or a specific value like pixels */
-    max-width: 1200px; /* Set a maximum width if needed */
-    margin: auto; /* Center the slider */
-}
-
-/* Adjust the width and height of the images within the slider */
-.slick-slide img {
-    width: 100%; /* Make sure images fill the slider container */
-    height: auto; /* Maintain the aspect ratio of the images */
-}
-
-/* Rest of your existing styles */
 
 /* Media query for tablets and smaller screens */
 @media (max-width: 768px) {
