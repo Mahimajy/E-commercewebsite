@@ -200,6 +200,21 @@ header{
 	.banner {
 		padding-bottom: 120%;
 	}
+	  @keyframes bannerAnimationMobile {
+    0% {
+      background-image: url(../photos/banner1-mob.webp);
+    }
+    33% {
+      background-image: url(../photos/banner2-mob.webp);
+    }
+    66% {
+      background-image: url(../photos/banner3-mob.webp);
+    }
+    100% {
+      background-image: url(../photos/banner1-mob.webp);
+    }
+  }
+}
 .fullscreen-link{
 	z-index: 10;
 	position: absolute;
