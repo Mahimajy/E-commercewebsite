@@ -5,7 +5,26 @@ let pageBody = document.getElementsByTagName('body');
 let hideIcon = document.getElementById('mobile-menu_hide');
 // JavaScript to toggle between desktop and mobile banners
 let bannerElement = document.getElementById('main-banner');
-let currentBannerIndex = 0;
+let currentBanner = 0;
+
+function showBanner(index) {
+    const banners = document.querySelectorAll('.banner');
+    banners.forEach((banner, i) => {
+        banner.style.display = i === index ? 'block' : 'none';
+    });
+}
+
+function nextBanner() {
+    currentBanner = (currentBanner + 1) % 4; // Adjust the number based on the total number of banners
+    showBanner(currentBanner);
+}
+
+// Automatically switch banners every 5 seconds (adjust as needed)
+setInterval(nextBanner, 5000);
+
+// Initial display
+showBanner(currentBanner);
+
 
 
 function autoSlide() {
