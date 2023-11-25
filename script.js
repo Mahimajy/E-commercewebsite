@@ -3,7 +3,20 @@ let navBar = document.getElementById('nav-bar');
 let pageBody = document.getElementsByTagName('body');
 //let showIcon = document.getElementById('mobile-menu_show');
 let hideIcon = document.getElementById('mobile-menu_hide');
+// JavaScript to toggle between desktop and mobile banners
+let bannerElement = document.getElementById('main-banner');
 
+function setBannerAnimation() {
+  if (window.innerWidth <= 560) {
+    bannerElement.style.animationName = 'bannerAnimationMobile';
+  } else {
+    bannerElement.style.animationName = 'bannerAnimation';
+  }
+}
+
+// Call the function on page load and window resize
+window.onload = setBannerAnimation;
+window.onresize = setBannerAnimation;
 
 function showMenu(){
     navBar.style.left = '0';
