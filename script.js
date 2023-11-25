@@ -5,6 +5,37 @@ let pageBody = document.getElementsByTagName('body');
 let hideIcon = document.getElementById('mobile-menu_hide');
 // JavaScript to toggle between desktop and mobile banners
 let bannerElement = document.getElementById('main-banner');
+let currentBannerIndex = 0;
+
+function showBanner(index) {
+    const banners = bannerElement.getElementsByTagName('img');
+    if (index >= 0 && index < banners.length) {
+        for (let i = 0; i < banners.length; i++) {
+            banners[i].style.display = 'none';
+        }
+        banners[index].style.display = 'block';
+        currentBannerIndex = index;
+    }
+}
+
+function prevBanner() {
+    currentBannerIndex = (currentBannerIndex - 1 + banners.length) % banners.length;
+    showBanner(currentBannerIndex);
+}
+
+function nextBanner() {
+    currentBannerIndex = (currentBannerIndex + 1) % banners.length;
+    showBanner(currentBannerIndex);
+}
+
+// Call the function on page load and window resize
+window.onload = function () {
+    setBannerAnimation();
+    showBanner(currentBannerIndex);
+};
+
+window.onresize = setBannerAnimation;
+
 
 function setBannerAnimation() {
   if (window.innerWidth <= 560) {
@@ -13,10 +44,6 @@ function setBannerAnimation() {
     bannerElement.style.animationName = 'bannerAnimation';
   }
 }
-
-// Call the function on page load and window resize
-window.onload = setBannerAnimation;
-window.onresize = setBannerAnimation;
 
 function showMenu(){
     navBar.style.left = '0';
