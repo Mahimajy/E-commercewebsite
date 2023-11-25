@@ -182,6 +182,17 @@ header{
 }
 /*----------MAIN BANNER--------------*/
 #main-banner {
+/* Media query for tablets and smaller screens */
+@media (max-width: 768px) {
+  .desktop-banner {
+    display: none; /* Hide desktop banner on smaller screens */
+  }
+
+  .mobile-banner {
+    display: block; /* Show mobile banner on smaller screens */
+  }
+}
+
     position: relative;
     overflow: hidden;
     width: 100%;
