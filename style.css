@@ -227,6 +227,7 @@ header{
 .banner-img {
     display: none;
     width: 100%;
+    height: auto; /* Ensure images maintain their aspect ratio */
 }
 
 .left-arrow,
@@ -264,6 +265,7 @@ header{
 	.banner {
 		padding-bottom: 120%;
 	}
+}
 	  @keyframes bannerAnimationMobile {
     0% {
       background-image: url(../photos/banner1-mob.webp);
