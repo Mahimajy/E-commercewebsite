@@ -7,26 +7,7 @@ let hideIcon = document.getElementById('mobile-menu_hide');
 let bannerElement = document.getElementById('main-banner');
 let currentBannerIndex = 0;
 
-function showBanner(index) {
-    const banners = bannerElement.getElementsByTagName('img');
-    if (index >= 0 && index < banners.length) {
-        for (let i = 0; i < banners.length; i++) {
-            banners[i].style.display = 'none';
-        }
-        banners[index].style.display = 'block';
-        currentBannerIndex = index;
-    }
-}
 
-function prevBanner() {
-    currentBannerIndex = (currentBannerIndex - 1 + banners.length) % banners.length;
-    showBanner(currentBannerIndex);
-}
-
-function nextBanner() {
-    currentBannerIndex = (currentBannerIndex + 1) % banners.length;
-    showBanner(currentBannerIndex);
-}
 function autoSlide() {
     nextBanner();
     setTimeout(autoSlide, 3000); // Change slide every 3 seconds
