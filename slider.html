@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  <title>Automatic Slider - Slick Carousel</title>
+</head>
+<body>
+
+  <div class="slider">
+    <div><img src="banner1.webp" alt="banner1"></div>
+    <div><img src="banner2.webp" alt="banner2"></div>
+    <div><img src="banner3.webp" alt="banner3"></div>
+    <div><img src="banner4.webp" alt="banner4"></div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.slider').slick({
+        autoplay: true,
+        autoplaySpeed: 2000, // Adjust the speed in milliseconds
+      });
+    });
+  </script>
+
+</body>
+</html>
+
