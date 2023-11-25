@@ -51,6 +51,22 @@ function setBannerAnimation() {
     bannerElement.style.animationName = 'bannerAnimation';
   }
 }
+$('.slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    responsive: [
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2
+            }
+        }
+        // Add more responsive settings if needed
+    ]
+});
+
 
 function showMenu(){
     navBar.style.left = '0';
