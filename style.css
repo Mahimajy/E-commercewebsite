@@ -182,7 +182,34 @@ header{
 }
 /*----------MAIN BANNER--------------*/
 #main-banner {
-	width: 100%;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.banner-img {
+    display: none;
+    width: 100%;
+}
+
+.left-arrow,
+.right-arrow {
+    position: absolute;
+    top: 50%;
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
 }
 .banner{
 	background-color: #ced2c5;
