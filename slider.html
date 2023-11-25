@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    #slider-container {
+      overflow: hidden;
+    }
+
+    #slider {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+
+<div id="slider-container">
+  <div id="slider">
+    <div class="slide"><img src="banner1-mob.webp" alt="banner1-mob"></div>
+    <div class="slide"><img src="banner2-mob.webp" alt="banner2-mob"></div>
+    <div class="slide"><img src="banner3-mob.webp" alt="banner3-mob"></div>
+    <div class="slide"><img src="banner1.webp" alt="banner1"></div>
+    <div class="slide"><img src="banner2.webp" alt="banner2"></div>
+    <div class="slide"><img src="banner3.webp" alt="banner3"></div>
+    <div class="slide"><img src="banner4.webp" alt="banner4"></div>
+  </div>
+</div>
+
+<script>
+  const slider = document.getElementById('slider');
+  let slideIndex = 0;
+
+  function showSlides() {
+    slideIndex = (slideIndex + 1) % slider.children.length;
+    const translateValue = -slideIndex * 100 + '%';
+    slider.style.transform = 'translateX(' + translateValue + ')';
+  }
+
+  setInterval(showSlides, 3000); // Adjust the interval (in milliseconds) as needed
+</script>
+
+</body>
+</html>
